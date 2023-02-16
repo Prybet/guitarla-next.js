@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  next-serve:
+    image: guitarla-next.js:1.0.0
+    build: .
+    container_name: GuitarLA-Next.js
+    restart: always
+    environment:
+      - API_URL=${API_URL}
+      - NODE_ENV=${NODE_ENV}
+    ports:
+      - "8080:3000"
